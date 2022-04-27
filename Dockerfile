@@ -16,6 +16,8 @@ RUN apt-get update \
 # Switch to the new user
 USER twitterdump
 ENV PATH="/home/twitterdump/.dotnet/tools:${PATH}"
+WORKDIR /home/twitterdump/
+
 
 # Install the tool
 RUN dotnet tool install --global TwitterDump
