@@ -22,6 +22,8 @@ WORKDIR /home/twitterdump/
 # Install the tool
 RUN dotnet tool install --global TwitterDump
 
+COPY entrypoint.sh /
 
-    
+
+ENTRYPOINT ["/entrypoint.sh"]    
     
